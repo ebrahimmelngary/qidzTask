@@ -5,7 +5,7 @@ import {COLORS} from '../../../common/Colors';
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: COLORS.white,
+    backgroundColor: COLORS.gray,
     height: calcHeight(40),
     width: calcWidth(233),
     paddingHorizontal: calcWidth(10),

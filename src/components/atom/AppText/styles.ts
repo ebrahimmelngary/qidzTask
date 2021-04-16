@@ -5,7 +5,7 @@ import {calcFont} from '../../../utils';
 const styles = StyleSheet.create({
   text: {
     fontSize: calcFont(15),
-    color: COLORS.white,
+    color: COLORS.black,
     textAlign: Platform.OS === 'ios' ? 'left' : 'auto',
   },
 });

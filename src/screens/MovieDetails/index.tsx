@@ -5,7 +5,6 @@ import {COLORS, ICONS} from '../../common';
 import {PressedIcon} from '../../components/atom/AppIcon';
 import AppText from '../../components/atom/AppText';
 import { addToWishlist, removeFromWishlist } from '../../redux/actions/wishList';
-import {IMAGE_URL} from '../../services';
 import styles from './styles';
 
 interface FavoriteProps {
@@ -34,7 +33,7 @@ const Favorite: React.FC<FavoriteProps> = ({route}: FavoriteProps) => {
       <ImageBackground
         style={styles.imageContainer}
         resizeMode={'contain'}
-        source={{uri: `${IMAGE_URL}${item.poster_path}`}}>
+        source={{uri: item.Poster}}>
         <PressedIcon
           onPress={onPressBookmark}
           name={ICONS.heart}

@@ -5,6 +5,7 @@ import {
 } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import MainStack from './Stacks/MainStack';
+import AuthStack from './Stacks/Auth';
 
 export const navigationRef: React.RefObject<NavigationContainerRef> = React.createRef();
 
@@ -15,6 +16,7 @@ const RootNavigation = () => {
     <RootStack.Navigator
       headerMode="none"
       screenOptions={{animationEnabled: false}}>
+      <RootStack.Screen name="Auth" component={AuthStack} />
       <RootStack.Screen name="Main" component={MainStack} />
     </RootStack.Navigator>
   );
@@ -22,9 +24,9 @@ const RootNavigation = () => {
 
 const Navigation: React.FC = () => {
   return (
-      <NavigationContainer ref={navigationRef}>
-        <RootNavigation />
-      </NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
+      <RootNavigation />
+    </NavigationContainer>
   );
 };
 export default Navigation;
